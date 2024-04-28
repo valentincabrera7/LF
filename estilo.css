@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ededed;
+    scroll-behavior: smooth;
+}
+
+/*/ ////////////////////////////////////////////////////////////////// HEADER ///////////////////////////////////////////////////////////////////////////////*/
+
+header {
+    width: 100%;
+    background-color: #0d085c;
+}
+
+
+#menu-icon {
+    width: 100%;
+   
+}
+
+#menu-icon:hover ul {
+    display: block;
+}
+
+.navbar {
+    height: 17dvh;
+    width: 100%;
+    background-image: linear-gradient(to , rgba(60, 117, 139, 0.7) 30%, transparent);
+
+}
+
+.navbar.active {
+    display: block;
+    animation: slideDown 1.2s ease forwards;
+}
+
+.navbar:not(.active) {
+    animation: slideUp 0 ease forwards;
+  }
+
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+  }
+  
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.navbar li {
+    
+}
+
+
+.navbar li a i {
+    font-size: 15px;
+}
+
+.nav-link { /* Nosotros, productos y contactos */
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex; 
+    transform: translateY(50px);
+    align-items: center;
+    transition: color 0.3s ease;
+    color: #ededed; 
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #0d085c;
+}
+
+.presentacion {
+    background-image: linear-gradient(to bottom,#0d085c 60%, #4b5ea7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ededed; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15px;
+}
+  
+
+.presentacion p:first-child {
+    font-size: 2rem; 
+    font-weight: bold; 
+}
+
+#problemáticas {
+    padding: 45px;
+}
+
+.presentacion img {
+    max-width: 30vh; 
+    height: auto; 
+    margin-top: 30px;
+}
+
+.presentacion p {
+    font-weight: boler;
+}
+
+
+.gama-productos {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+    margin-left: 8rem;
+    border: 4px solid linear-gradient(to bottom, #1b1388, #6174d4);
+    border-radius: 75%;
+}
+
+#menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 13rem;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ededed;
+    z-index: 100;
+}
+
+/*/ ////////////////////////////////////////////////////////////////// MAIN //////////////////////////////////////////////////////////////////////////////////*/
+
+.main__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30dvh;
+    position: relative;
+    width: 100%;
+}
+
+
+.description {
+    height: auto;
+    max-width: 300px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px; 
+    position: relative;
+}
+
+.description img {
+    height: 500px;
+    width: 100%;
+    transition: transform 0.8s;
+}
+
+.description img:hover {
+    transform: scale(1.02);
+}
+
+#enlace-productos {
+    text-decoration: none;
+    color: #ededed;
+    background: #134488;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    position: absolute;
+    bottom: -5px;
+    left: 78%;
+    border: 1px solid #134488;
+    border-radius: 12px;
+    padding: 2px 10px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.video-container iframe {
+    max-width: 100%;
+}
+
+/*/ ////////////////////////////////////////////////////////////////// FOOTER ///////////////////////////////////////////////////////////////////////////////*/
+
+footer {
+    background: #ededed;
+    padding: 40px;
+    height: 100vh;
+    text-align: center;
+}
+
+
+.form {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.form legend span {
+    border-bottom: 3.5px solid #138846;
+    color: #0d085c;
+    font-style: italic;
+}
+
+
+.form-item {
+    margin-bottom: 20px; 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; 
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px; 
+    margin-top: 3px; 
+    font-family: 'Roboto', sans-serif;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+#btn {
+    text-align: center;
+    margin: 10px;
+}
+
+#btn input {
+    padding: 10px 16px; 
+    font-size: 14px; 
+    background-color: #138846;
+    color: #ededed;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+#btn input:hover {
+    background-color: #13733d;
+}
+
+input[type="submit"] {
+    padding: 10px 16px; 
+    font-size: 14px; 
+}
+
+
+
+.contacto-empresa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.empresa-info p {
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 15px;
+    text-align: center;
+    font-family: sans-serif;
+
+}
+.empresa-info h2 {
+    font-size: 24px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 15px;
+    color: black;
+
+    
+}
+
+.empresa-info a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+} 
+.fa-whatsapp {
+    color: #008000;
+    font-size: 20px;
+    margin-right: 5px;
+
+}
+.fa-envelope {
+    font-family:sans-serif;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+/* MEDIA QUERIES */
+
